@@ -6,6 +6,7 @@ import org.example.model.Number;
 import java.util.Arrays;
 import java.util.Stack;
 // move to another package; add other patterns to this project
+// now it's the test branch
 public class Main {
     public static void main(String[] args) {
         String expression = "1+2+3-4"; // 2
