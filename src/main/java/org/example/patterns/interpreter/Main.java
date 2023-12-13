@@ -2,8 +2,6 @@ package org.example.patterns.interpreter;
 
 import org.example.patterns.interpreter.interfaces.Expression;
 
-// move to another package; add other patterns to this project
-// now it's the test branch
 public class Main {
     public static void main(String[] args) {
         String expression = "1+2+3-4"; // 2
