@@ -1,9 +1,21 @@
 package org.example;
 
+import org.example.interfaces.Expression;
+import org.example.model.Number;
+
+import java.util.Arrays;
+import java.util.Stack;
+// move to another package; add other patterns to this project
 public class Main {
     public static void main(String[] args) {
         String expression = "1+2+3-4"; // 2
-
+        Expression evaluator = new Evaluate(expression);
+        System.out.println(evaluator.interpret(evaluator));
+        // how to handle whitespaces etc
+//        String reversed = new StringBuilder(expression).reverse().toString();
+//        for (String s : reversed.split("\\d+\\s*")) { // \\d -> any symbol thar is not digit (so only digits remain in reversed.split)
+//            System.out.println(s);
+//        }
 
     }
 }
