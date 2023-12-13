@@ -1,10 +1,7 @@
-package org.example;
+package org.example.patterns.interpreter;
 
-import org.example.interfaces.Expression;
-import org.example.model.Number;
+import org.example.patterns.interpreter.interfaces.Expression;
 
-import java.util.Arrays;
-import java.util.Stack;
 // move to another package; add other patterns to this project
 // now it's the test branch
 public class Main {

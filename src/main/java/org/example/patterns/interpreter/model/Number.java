@@ -1,6 +1,6 @@
-package org.example.model;
+package org.example.patterns.interpreter.model;
 
-import org.example.interfaces.Expression;
+import org.example.patterns.interpreter.interfaces.Expression;
 
 public class Number implements Expression {
     private int number;

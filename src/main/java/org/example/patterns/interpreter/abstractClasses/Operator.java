@@ -1,6 +1,6 @@
-package org.example.abstractClasses;
+package org.example.patterns.interpreter.abstractClasses;
 
-import org.example.interfaces.Expression;
+import org.example.patterns.interpreter.interfaces.Expression;
 
 public abstract class Operator implements Expression {
     Expression expressionLeft;

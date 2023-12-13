@@ -1,9 +1,9 @@
-package org.example;
+package org.example.patterns.interpreter;
 
-import org.example.interfaces.Expression;
-import org.example.model.Number;
-import org.example.operators.Minus;
-import org.example.operators.Plus;
+import org.example.patterns.interpreter.interfaces.Expression;
+import org.example.patterns.interpreter.model.Number;
+import org.example.patterns.interpreter.operators.Minus;
+import org.example.patterns.interpreter.operators.Plus;
 
 import java.util.Stack;
 
