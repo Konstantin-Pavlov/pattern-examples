@@ -14,12 +14,16 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class TruckRunner {
-    public static void main(String[] args) {
-        Truck[] trucks = MotorDepot.getTrucks();
-        Driver[] drivers = MotorDepot.getDrivers();
-        State[] states = {new OnBase(), new OnRepair(), new OnRoute(), new OnParking()};
-        TruckOffice office = new TruckOffice();
+    static Truck[] trucks = MotorDepot.getTrucks();
+    static Driver[] drivers = MotorDepot.getDrivers();
+    static State[] states = {new OnBase(), new OnRepair(), new OnRoute(), new OnParking()};
+    static TruckOffice office = new TruckOffice();
 
+    public static void main(String[] args) {
+        run();
+    }
+
+    private static void run() {
         System.out.println("закрепление водителей за грузовиками");
         for (int i = 0; i < trucks.length; i++) {
             trucks[i].setDriver(drivers[i]);
@@ -32,17 +36,17 @@ public class TruckRunner {
             truck.setState(states[r]);
         }
 
+        trucks[0].setState(new OnRepair());
+        trucks[0].startDriving();
+        System.out.println(trucks[0]);
+
+
+//        office.run(trucks, drivers);
+    }
+}
+
 //        Arrays.stream(trucks != null ? trucks : new Truck[0]).forEach(System.out::println);
 //        System.out.println();
 //        Arrays.stream(drivers != null ? drivers : new Driver[0]).forEach(System.out::println);
 
-//        trucks[0].setState(new OnParking());
-//        trucks[0].startRepair();
-//        trucks[0].startDriving();
-//        trucks[0].changeDriver();
 
-        office.run(trucks, drivers);
-
-
-    }
-}
