@@ -1,7 +1,7 @@
 package org.example.patterns.state.trucks.enums;
 
 public enum TruckStates {
-    ONBASE("returned to base"), ONPARKING("Stopped in the parking lot"), ONREPAIR("arrived for repairs"), ONROUTE("hit the road");
+    ON_BASE("returned to base"), ON_PARKING("Stopped in the parking lot"), ON_REPAIR("arrived for repairs"), ON_ROUTE("hit the road");
 
     String status;
 

@@ -7,7 +7,7 @@ import org.example.patterns.state.trucks.model.Truck;
 
 public class OnRoute implements State {
 
-    public static TruckStates state = TruckStates.ONROUTE;
+    public static TruckStates state = TruckStates.ON_ROUTE;
 
     @Override
     public void changeDriver(Truck truck) throws CustomException {

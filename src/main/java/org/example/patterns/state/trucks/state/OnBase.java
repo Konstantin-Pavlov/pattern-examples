@@ -11,7 +11,7 @@ import org.example.patterns.state.trucks.util.MotorDepot;
 
 public class OnBase implements State {
 
-    public static TruckStates state = TruckStates.ONBASE;
+    public static TruckStates state = TruckStates.ON_BASE;
 
     @Override
     public void changeDriver(Truck truck) throws CustomException {

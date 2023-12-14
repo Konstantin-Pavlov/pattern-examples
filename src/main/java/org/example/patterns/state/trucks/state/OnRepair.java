@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class OnRepair implements State {
 
-    public static TruckStates state = TruckStates.ONREPAIR;
+    public static TruckStates state = TruckStates.ON_REPAIR;
 
     @Override
     public void changeDriver(Truck truck) throws CustomException {
