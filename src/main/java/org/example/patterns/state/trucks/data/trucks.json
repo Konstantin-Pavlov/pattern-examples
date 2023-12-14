@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "truckBrand": "Renault Magnum",
+    "driverName": "unknown",
+    "truckLocation": "base"
+  },
+  {
+    "id": 2,
+    "truckBrand": "Volvo FH12",
+    "driverName": "unknown",
+    "truckLocation": "base"
+  },
+  {
+    "id": 3,
+    "truckBrand": "DAF XF",
+    "driverName": "unknown",
+    "truckLocation": "base"
+  }
+]
