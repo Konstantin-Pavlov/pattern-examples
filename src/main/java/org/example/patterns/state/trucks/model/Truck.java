@@ -36,7 +36,7 @@ public class Truck {
     }
 
     public String getTruckLocation() {
-        return truckLocation;
+        return this.truckLocation;
     }
 
     public void setTruckLocation(String truckLocation) {
@@ -58,7 +58,7 @@ public class Truck {
 
     public void setState(State state) {
         this.state = state;
-        this.setTruckLocation(this.state.getClass().getSimpleName());
+        this.setTruckLocation(this.state.getStateMessage().getStatus());
     }
 
     public void changeDriver() {
