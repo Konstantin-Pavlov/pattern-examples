@@ -12,7 +12,7 @@ public class Evaluate implements Expression {
 
     public Evaluate(String expression) {
         Stack<Expression> expressions = new Stack<>();
-        String reversed = new StringBuilder(expression).reverse().toString();
+        String reversed = new StringBuilder(expression).reverse().toString(); // не подходит для двухзначных цифр (12 -> 21)
         for (String number : reversed.split("\\D")) { // \\D -> any symbol thar is not digit (so only digits remain in reversed.split)
             expressions.push(new Number(Integer.parseInt(number)));
         }
