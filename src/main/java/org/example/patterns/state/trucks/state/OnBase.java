@@ -12,7 +12,7 @@ public class OnBase implements State {
 
     @Override
     public void changeDriver(Truck truck) throws CustomException {
-        Driver newDriver = null;
+        Driver newDriver;
         try {
             newDriver = MotorDepot.getAvalibleDriver();
         } catch (CustomException e) {

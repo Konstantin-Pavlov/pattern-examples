@@ -117,7 +117,7 @@ class UserInputHandler {
     }
 
     private int checkUserInput(String strInput) throws CustomException, NumberFormatException {
-        int intInput = 0;
+        int intInput;
         if (strInput.isBlank() || strInput.isEmpty()) {
             throw new CustomException("empty input");
         }
