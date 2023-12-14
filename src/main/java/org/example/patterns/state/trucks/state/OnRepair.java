@@ -11,8 +11,6 @@ import java.util.Random;
 
 public class OnRepair implements State {
 
-    public static TruckStates state = TruckStates.ON_REPAIR;
-
     @Override
     public void changeDriver(Truck truck) throws CustomException {
         throw new CustomException("Нельзя сменить водителя");
@@ -30,6 +28,11 @@ public class OnRepair implements State {
     @Override
     public void startRepair(Truck truck) throws CustomException {
         throw new CustomException("Уже в ремонте");
+    }
+
+    @Override
+    public TruckStates getStateMessage() {
+        return TruckStates.ON_REPAIR;
     }
 
 

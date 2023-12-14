@@ -7,8 +7,6 @@ import org.example.patterns.state.trucks.model.Truck;
 
 public class OnRoute implements State {
 
-    public static TruckStates state = TruckStates.ON_ROUTE;
-
     @Override
     public void changeDriver(Truck truck) throws CustomException {
         throw new CustomException("Грузовик в пути, невозможно сменить водителя");
@@ -23,6 +21,11 @@ public class OnRoute implements State {
     public void startRepair(Truck truck) {
         truck.setState(new OnRepair());
         System.out.println("успешно встали на ремонт");
+    }
+
+    @Override
+    public TruckStates getStateMessage() {
+        return TruckStates.ON_ROUTE;
     }
 
 

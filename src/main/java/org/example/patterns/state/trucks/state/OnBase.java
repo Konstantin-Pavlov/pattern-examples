@@ -11,8 +11,6 @@ import org.example.patterns.state.trucks.util.MotorDepot;
 
 public class OnBase implements State {
 
-    public static TruckStates state = TruckStates.ON_BASE;
-
     @Override
     public void changeDriver(Truck truck) throws CustomException {
         Driver newDriver;
@@ -40,5 +38,10 @@ public class OnBase implements State {
     public void startRepair(Truck truck) throws CustomException {
         truck.setState(new OnRepair());
         System.out.println("успешно встали на ремонт");
+    }
+
+    @Override
+    public TruckStates getStateMessage() {
+        return TruckStates.ON_BASE;
     }
 }

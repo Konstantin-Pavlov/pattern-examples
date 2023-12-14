@@ -7,10 +7,13 @@ import org.example.patterns.state.trucks.model.Truck;
 
 public class OnParking extends OnBase implements State {
 
-    public static TruckStates state = TruckStates.ON_PARKING;
-
     @Override
     public void startRepair(Truck truck) throws CustomException {
         throw new CustomException("невозможно встать на ремонт на стоянке");
+    }
+
+    @Override
+    public TruckStates getStateMessage() {
+        return TruckStates.ON_PARKING;
     }
 }
