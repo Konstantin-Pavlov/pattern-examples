@@ -11,15 +11,24 @@ public class TruckOffice implements Office {
     public void run(Truck[] trucks, Driver[] drivers) {
         UserInputHandler inputHandler = new UserInputHandler();
         Truck selectedTruck;
-        selectedTruck = getTruckInfo(inputHandler, trucks);
+        boolean continueSimalation = true;
 
-        changeTruckState(inputHandler, selectedTruck);
-        printDrivers(drivers);
-        printTrucks(trucks);
-        printTrucksAndDrivers(trucks);
+        while (continueSimalation) {
+            selectedTruck = getTruckInfo(inputHandler, trucks);
+            changeTruckState(inputHandler, selectedTruck);
+            printDrivers(drivers);
+            printTrucks(trucks);
+            printTrucksAndDrivers(trucks);
+            continueSimalation = askForExit(inputHandler);
+        }
 
         inputHandler.closeUserInput();
     }
+
+    private boolean askForExit(UserInputHandler inputHandler) {
+        return inputHandler.ifContinueTheProgramm();
+    }
+
 
     private Truck getTruckInfo(UserInputHandler inputHandler, Truck[] trucks) {
         int userInput;
@@ -99,6 +108,11 @@ public class TruckOffice implements Office {
 
 class UserInputHandler {
     private final Scanner scanner = new Scanner(System.in);
+
+    public boolean ifContinueTheProgramm() {
+        System.out.print("continue truck simulation? y/n: ");
+        return scanner.nextLine().equals("y");
+    }
 
     public int getAndCheckUserInput() {
         int input;
