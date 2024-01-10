@@ -13,6 +13,7 @@ import org.example.patterns.state.trucks.util.MotorDepot;
 import java.util.Arrays;
 import java.util.Random;
 
+// todo add return to base method
 public class TruckRunner {
     static Truck[] trucks = MotorDepot.getTrucks();
     static Driver[] drivers = MotorDepot.getDrivers();
@@ -36,16 +37,12 @@ public class TruckRunner {
             truck.setState(states[r]);
         }
 
-        trucks[0].setState(new OnRepair());
-        trucks[0].startDriving();
-        System.out.println(trucks[0]);
+        Arrays.stream(trucks != null ? trucks : new Truck[0]).forEach(System.out::println);
 
-
-//        office.run(trucks, drivers);
+        office.run(trucks, drivers);
     }
 }
 
-//        Arrays.stream(trucks != null ? trucks : new Truck[0]).forEach(System.out::println);
 //        System.out.println();
 //        Arrays.stream(drivers != null ? drivers : new Driver[0]).forEach(System.out::println);
 
