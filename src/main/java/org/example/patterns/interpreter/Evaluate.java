@@ -10,6 +10,7 @@ import java.util.Stack;
 import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
+// todo - add * and /
 public class Evaluate implements Expression {
     private final Expression evaluate;
 
