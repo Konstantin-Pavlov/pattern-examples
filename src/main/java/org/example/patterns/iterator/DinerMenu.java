@@ -5,6 +5,12 @@ public class DinerMenu {
     private int numberOfItems = 0;
     MenuItem[] menuItems;
 
+    public DinerMenu() {
+        this.menuItems = new MenuItem[MAX_ITEMS];
+        addItem("vegetarian blt (beacon, lettuce, tomato)", "soy bacon with lettuce and tomatoes on whole grain bread", true, 299);
+        addItem("BLT", "bacon with lettuce and tomatoes on whole grain bread", false, 199);
+    }
+
     public void addItem(String name, String description, boolean vegetarian, double price) {
         if (numberOfItems >= MAX_ITEMS) {
             System.err.println("can't add item");
