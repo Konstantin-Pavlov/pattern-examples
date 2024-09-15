@@ -1,6 +1,6 @@
 package org.example.patterns.state.trucks.util;
 
-import exceptions.CustomException;
+import org.example.patterns.exceptions.CustomException;
 import org.example.patterns.state.trucks.model.Driver;
 import org.example.patterns.state.trucks.model.Truck;
 

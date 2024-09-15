@@ -1,4 +1,4 @@
-package exceptions;
+package org.example.patterns.exceptions;
 
 public class CustomException extends Exception {
     public CustomException() {

@@ -1,6 +1,6 @@
 package org.example.patterns.state.trucks.model;
 
-import exceptions.CustomException;
+import org.example.patterns.exceptions.CustomException;
 import org.example.patterns.state.trucks.interfaces.Office;
 
 import java.util.Scanner;
