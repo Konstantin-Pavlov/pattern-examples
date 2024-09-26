@@ -1,4 +1,4 @@
-package org.example.patterns.builder;
+package org.example.patterns.builder.example1;
 
 public class UserRunner {
     public static void main(String[] args) {
